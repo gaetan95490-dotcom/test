@@ -1,0 +1,21 @@
+# Philips Minimal V3 — version avec 6 fonds d’écran personnalisables
+
+## Ce qui a été modifié
+- Le menu « Personnaliser » contient le choix du fond d’écran.
+- Les six images `fond_1.jpg` à `fond_6.jpg` sont utilisées comme arrière-plans.
+- Le choix est mémorisé après fermeture de l’application.
+- Le reste du menu et les raccourcis TV sont conservés.
+
+## Remplacer les images sans modifier le code
+1. Ouvre le dossier `FONDS_ECRAN_A_REMPLACER`.
+2. Remplace les six fichiers par tes propres images, en gardant exactement les noms `fond_1.jpg` à `fond_6.jpg`.
+3. Les images doivent être au format JPG. Garde une copie de sécurité.
+4. Copie ensuite ces six fichiers dans `app/src/main/res/drawable/` en remplaçant les fichiers du même nom.
+5. Recompile le projet pour créer un nouvel APK.
+
+Les six images actuellement fournies sont des fonds d’exemple. Tes images personnelles n’étaient pas jointes au ZIP, donc elles ne peuvent pas être intégrées à cette archive à ta place.
+
+## Important : créer l’application installable
+Cette archive est le **code source**, pas un APK installable. Le ZIP ne se lance pas directement sur la télévision. Il faut ouvrir le dossier `PhilipsMinimal` avec Android Studio sur un ordinateur, laisser Gradle synchroniser le projet, puis choisir **Build > Build Bundle(s) / APK(s) > Build APK(s)**. Le fichier APK obtenu devra ensuite être transféré et installé sur la TV si Android TV l’autorise.
+
+Le projet original ne contenait pas le Gradle Wrapper. Android Studio peut généralement utiliser sa version Gradle configurée, mais une compilation peut nécessiter une connexion Internet et l’installation d’un JDK/SDK compatibles. Le résultat n’a pas été compilé ni testé sur le téléviseur dans cet environnement.
